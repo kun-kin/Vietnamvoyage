@@ -169,11 +169,11 @@
             -webkit-box-orient: vertical;
 
             a {
-                color: var(--blog-loop-title-color);
+                color: var(--primary-color);
                 line-height: inherit;
 
                 &:hover {
-                    color: var(--blog-loop-title-color-hover);
+                    color: var(--second-color);
                 }
             }
 
@@ -185,6 +185,16 @@
 
     @media(max-width:767.98px) {
         display: flex;
+
+        .tour-image {
+            width: 40%;
+            flex-shrink: 0;
+        }
+
+        .tour-info {
+            padding: 15px;
+            flex-grow: 1;
+        }
     }
 }
 
@@ -536,6 +546,10 @@
             font-size: 42px;
             text-align: center;
         }
+
+        @media(max-width:767.98px) {
+            padding: 40px;
+        }
     }
 
     @media(min-width:768px) {
@@ -613,14 +627,14 @@
             transition: all 300ms;
 
             .btn {
-                border-radius: 15px;
-                background-color: #168b02;
+                border-radius: 26px;
+                background-color: var(--accent-color);
                 color: #fff;
                 font-weight: 500;
                 padding: 10px 20px;
 
                 &:hover {
-                    background-color: #f60;
+                    background-color: var(--hover-accent-color);
                 }
             }
         }
@@ -654,7 +668,7 @@
 
         .icon-box {
             font-size: 60px;
-            color: #e35806;
+            color: var(--accent-color);
             padding: 0 0 20px;
 
             i {
@@ -751,7 +765,7 @@
 
     .icon-box {
         font-size: 60px;
-        color: #e35806;
+        color: var(--accent-color);
         padding: 0 0 20px;
 
         i {
@@ -996,7 +1010,7 @@
 
             i {
                 font-size: 3.75rem;
-                color: var(--sec-accent-color);
+                color: var(--accent-color);
                 margin-bottom: 10px;
             }
 
@@ -1273,7 +1287,7 @@
             h4,
             h5,
             h6 {
-                color: #168b02;
+                color: var(--sec-accent-color);
                 margin-bottom: 30px;
             }
 
@@ -1291,18 +1305,13 @@
     }
 
     .btn {
-        background-color: var(--sec-accent-color);
         text-align: center;
-        color: var(--white-text);
         line-height: 20px;
         font-size: 1.125rem;
         letter-spacing: 0;
         padding: 10px 15px;
         border-radius: 10px;
 
-        &:hover {
-            background: var(--accent-color);
-        }
     }
 }
 
@@ -1426,6 +1435,14 @@
                 }
             }
         }
+
+        @media(max-width:767.98px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media(max-width:576px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -1466,7 +1483,7 @@
                     font-weight: 600;
 
                     a {
-                        color: var(--black-text);
+                        color: var(--primary-color);
 
                         &:hover {
                             color: var(--accent-color);
@@ -1565,7 +1582,7 @@
         &-title {
             width: 100%;
             text-align: center;
-            background: var(--accent-color);
+            background: var(--primary-color);
             border-radius: 5px;
             padding: 10px 15px;
             color: var(--white-text);
@@ -1620,7 +1637,7 @@
                 margin: 0 auto;
                 border-radius: 10px;
                 color: var(--white-text);
-                background: var(--sec-accent-color);
+                background: var(--btn-color);
                 font-weight: 500;
                 font-size: 1rem;
                 letter-spacing: 0;
@@ -1628,7 +1645,7 @@
                 text-align: center;
 
                 &:hover {
-                    background: var(--accent-color);
+                    background: var(--hover-btn-color);
                     color: var(--white-text);
                 }
             }
@@ -1862,7 +1879,8 @@
             line-height: 25px;
 
             &:hover {
-                background: var(--accent-color);
+                background: var(--hover-accent-color);
+                border-color: var(--hover-accent-color);
                 color: var(--white-text);
             }
         }
@@ -1879,7 +1897,7 @@
                 margin-bottom: 5px;
 
                 a {
-                    color: var(--blog-loop-title-color);
+                    color: var(--primary-color);
                     line-height: inherit;
                 }
             }

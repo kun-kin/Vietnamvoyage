@@ -13,26 +13,29 @@
   --black-color: #000;
   --white-color: #fff;
   --box-shadow: #eae7f5;
-  --danger-color: #ff6058;
   --white-text: #fff;
   --black-text: #000;
   --gray-text: #3b3b3b;
   --light-gray: #ccc;
-  --accent-color: #2e871c;
-  --sec-accent-color: #f60;
   --border-color: #7d7d7d;
-  --bg-block: #faf9f8;
-  --bg-tab-heading: #f3f3f3;
-  --blog-loop-title-color: #2e871c;
-  --blog-loop-title-color-hover: #232323;
-  --link-color: #232323;
-  --footer-bg: #2e871c;
-  --footer-color: #fff;
-  --footer-color-hover: #f60;
-  --box-shadow: #eae7f5;
-  --price-color: #f60;
-  --des-color: #aaa;
-  --footer-icon-font: #f60;
+  --primary-color: #328488;
+  --primary-color2: #3c847c;
+  --second-color: #b99c72;
+  --btn-color: #11afb6;
+  --hover-btn-color: #33d5e2;
+  --accent-color: #2e871c;
+  --sec-accent-color: #b99c72;
+  --hover-accent-color: #d8bf9e;
+  --color1: #11afb6;
+  --color2: #eaf0ee;
+  --color3: #6ababe;
+  --color4: #b99c72;
+  --color5: #d8bf9e;
+  --color6: #a4d5d8;
+  --color7: #33d5e2;
+  --color8: #b79c8c;
+  --color9: #328488;
+  --color10: #3c847c;
 }
 
 *,
@@ -146,21 +149,6 @@ a:hover, a:focus {
   cursor: pointer;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #1a6fc9;
-  color: white;
-  border-radius: 4px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #135aa1;
-}
-
 .text-field,
 input[type=text],
 input[type=date],
@@ -225,14 +213,14 @@ textarea {
   cursor: pointer;
   font-size: 0.8125rem;
   font-family: inherit;
-  background: var(--accent-color);
+  background-color: var(--btn-color);
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.1rem;
   border: none;
 }
 .btn:hover {
-  background: #ff7600;
+  background-color: var(--hover-btn-color);
   color: #fff;
 }
 
@@ -247,9 +235,9 @@ textarea {
   letter-spacing: 1px;
   fill: #fff;
   color: #fff;
-  background-color: #2e871c;
+  background-color: var(--primary-color);
   border-radius: 50px;
-  padding: 28px 52px;
+  padding: 20px 40px;
 }
 @media (max-width: 1024px) {
   .elementor-btn {
@@ -270,7 +258,7 @@ textarea {
   font-weight: 500;
   line-height: 25px;
   padding: 8px 25px;
-  border-radius: 15px;
+  border-radius: 26px;
   text-transform: unset;
 }
 .cafe-btn:hover {
@@ -303,7 +291,7 @@ textarea {
 .section-heading .sectitle {
   font-family: var(--second-font);
   font-size: 42px;
-  color: #000;
+  color: var(--primary-color);
   margin-bottom: 20px;
   text-align: center;
   position: relative;
@@ -350,7 +338,7 @@ textarea {
 }
 
 .top-bar {
-  background: var(--accent-color);
+  background: var(--sec-accent-color);
   padding: 10px 0;
   color: var(--white-text);
   font-size: 0.875rem;
@@ -359,7 +347,7 @@ textarea {
   color: var(--white-text);
 }
 .top-bar a:hover {
-  color: var(--sec-accent-color);
+  color: var(--hover-accent-color);
 }
 .top-bar .top-menu a {
   text-transform: capitalize;
@@ -500,6 +488,9 @@ textarea {
   display: flex;
   align-items: center;
 }
+.logo img {
+  max-width: 100px;
+}
 
 .header-main-menu {
   width: 100%;
@@ -615,15 +606,15 @@ textarea {
 
 .header-btn {
   white-space: nowrap;
-  border-radius: 5px;
+  border-radius: 26px;
   letter-spacing: 0;
-  padding: 5px 10px;
+  padding: 6px 15px;
   font-size: 1rem;
-  background: var(--sec-accent-color);
+  background: var(--btn-color);
 }
 .header-btn:hover {
   color: var(--white-text);
-  background: var(--accent-color);
+  background: var(--hover-accent-color);
 }
 @media (max-width: 1023.98px) {
   .header-btn {
@@ -900,11 +891,11 @@ textarea {
   -webkit-box-orient: vertical;
 }
 .tour-card-inner .tour-info .tour-title a {
-  color: var(--blog-loop-title-color);
+  color: var(--primary-color);
   line-height: inherit;
 }
 .tour-card-inner .tour-info .tour-title a:hover {
-  color: var(--blog-loop-title-color-hover);
+  color: var(--second-color);
 }
 @media (max-width: 767.98px) {
   .tour-card-inner .tour-info .tour-title {
@@ -914,6 +905,14 @@ textarea {
 @media (max-width: 767.98px) {
   .tour-card-inner {
     display: flex;
+  }
+  .tour-card-inner .tour-image {
+    width: 40%;
+    flex-shrink: 0;
+  }
+  .tour-card-inner .tour-info {
+    padding: 15px;
+    flex-grow: 1;
   }
 }
 
@@ -1226,6 +1225,11 @@ textarea {
   font-size: 42px;
   text-align: center;
 }
+@media (max-width: 767.98px) {
+  .testimonials .box-text {
+    padding: 40px;
+  }
+}
 @media (min-width: 768px) {
   .testimonials .elementor-col-33 {
     flex: 0 0 38.509%;
@@ -1287,14 +1291,14 @@ textarea {
   transition: all 300ms;
 }
 .about-team-content .btn {
-  border-radius: 15px;
-  background-color: #168b02;
+  border-radius: 26px;
+  background-color: var(--accent-color);
   color: #fff;
   font-weight: 500;
   padding: 10px 20px;
 }
 .about-team-content .btn:hover {
-  background-color: #f60;
+  background-color: var(--hover-accent-color);
 }
 @media (max-width: 1023.98px) {
   .about-team {
@@ -1323,7 +1327,7 @@ textarea {
 }
 .reason-item a .icon-box {
   font-size: 60px;
-  color: #e35806;
+  color: var(--accent-color);
   padding: 0 0 20px;
 }
 .reason-item a .icon-box i {
@@ -1405,7 +1409,7 @@ textarea {
 }
 .guarantee-item .icon-box {
   font-size: 60px;
-  color: #e35806;
+  color: var(--accent-color);
   padding: 0 0 20px;
 }
 .guarantee-item .icon-box i {
@@ -1611,7 +1615,7 @@ textarea {
 }
 .why-chooseus-wrap .reason-item i {
   font-size: 3.75rem;
-  color: var(--sec-accent-color);
+  color: var(--accent-color);
   margin-bottom: 10px;
 }
 .why-chooseus-wrap .reason-item .title {
@@ -1844,7 +1848,7 @@ textarea {
 .details-tour-tabs .box-content-inner h4,
 .details-tour-tabs .box-content-inner h5,
 .details-tour-tabs .box-content-inner h6 {
-  color: #168b02;
+  color: var(--sec-accent-color);
   margin-bottom: 30px;
 }
 .details-tour-tabs .box-content-inner ul {
@@ -1856,17 +1860,12 @@ textarea {
   margin: 10px 0;
 }
 .create-tour .btn {
-  background-color: var(--sec-accent-color);
   text-align: center;
-  color: var(--white-text);
   line-height: 20px;
   font-size: 1.125rem;
   letter-spacing: 0;
   padding: 10px 15px;
   border-radius: 10px;
-}
-.create-tour .btn:hover {
-  background: var(--accent-color);
 }
 
 .related-tour .item {
@@ -1969,6 +1968,16 @@ textarea {
 .destinations-grid .item a .icon-box {
   margin-right: 10px;
 }
+@media (max-width: 767.98px) {
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .category-description {
   width: 100%;
@@ -2001,7 +2010,7 @@ textarea {
   font-weight: 600;
 }
 .blogs-item .item-inner .box-content .title a {
-  color: var(--black-text);
+  color: var(--primary-color);
 }
 .blogs-item .item-inner .box-content .title a:hover {
   color: var(--accent-color);
@@ -2084,7 +2093,7 @@ textarea {
 .sidebar .widget-title {
   width: 100%;
   text-align: center;
-  background: var(--accent-color);
+  background: var(--primary-color);
   border-radius: 5px;
   padding: 10px 15px;
   color: var(--white-text);
@@ -2128,7 +2137,7 @@ textarea {
   margin: 0 auto;
   border-radius: 10px;
   color: var(--white-text);
-  background: var(--sec-accent-color);
+  background: var(--btn-color);
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0;
@@ -2136,7 +2145,7 @@ textarea {
   text-align: center;
 }
 .sidebar .widget-contact-block .contact-block-btn:hover {
-  background: var(--accent-color);
+  background: var(--hover-btn-color);
   color: var(--white-text);
 }
 .sidebar .widget-tags .tagclound a {
@@ -2308,7 +2317,8 @@ textarea {
   line-height: 25px;
 }
 .testimonials-page .testimonial-filter .btn:hover {
-  background: var(--accent-color);
+  background: var(--hover-accent-color);
+  border-color: var(--hover-accent-color);
   color: var(--white-text);
 }
 
@@ -2320,7 +2330,7 @@ textarea {
   margin-bottom: 5px;
 }
 .testimonial-list .item .box-content .title a {
-  color: var(--blog-loop-title-color);
+  color: var(--primary-color);
   line-height: inherit;
 }
 .testimonial-list .item .box-content .box-info li {
@@ -2440,7 +2450,7 @@ footer {
   padding-top: 0;
 }
 .footer-column ul li a {
-  color: var(--footer-color);
+  color: #000;
 }
 
 .footer-bottom {
@@ -2462,7 +2472,7 @@ footer {
   margin: 0 2px 5px;
 }
 .footer-bottom .social-list li a {
-  color: var(--footer-color);
+  color: #fff;
   transition: color 0.3s;
   border: none;
   width: 30px;
